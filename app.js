@@ -21,8 +21,14 @@ loader.load( modelUrl, function ( gltf ) {
     gltf.scene.rotation.x = 1
     gltf.scene.rotation.y = .4
     gltf.scene.rotation.z = 0
+    
+    const mat = new THREE.MeshBasicMaterial({ color: "white" });
 
-    app.scene.add( gltf.scene );
+    const geo = new THREE.BoxGeometry();
+
+    const mesh = new THREE.Mesh(geo, mat);
+
+    app.scene.add( mesh );
     console.log(app.camera)
     window.addEventListener('scroll', onScroll);
 
