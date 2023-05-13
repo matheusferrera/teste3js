@@ -28,6 +28,7 @@ loader.load( modelUrl, function ( gltf ) {
 
     function onScroll() {
       const scrollY = window.scrollY;
+      console.log(scrollY)
       const rotationSpeed = 0.001;
       gltf.scene.rotation.x = scrollY * rotationSpeed;
       gltf.scene.rotation.y = scrollY * rotationSpeed;
