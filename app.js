@@ -9,7 +9,7 @@ var loader = new GLTFLoader();
 /* You must download your own .gltf model and reference it below.
    If you do not see it, the model may be too small, try to adjust
    the scale values below. */
-let modelUrl = './out.glb'
+let modelUrl = 'out.glb'
 
 loader.load( modelUrl, function ( gltf ) {
 
