@@ -9,7 +9,7 @@ var loader = new GLTFLoader();
 /* You must download your own .gltf model and reference it below.
    If you do not see it, the model may be too small, try to adjust
    the scale values below. */
-let modelUrl = './MobilePhone_01.gltf'
+let modelUrl = 'MobilePhone_01.gltf'
 
 loader.load( modelUrl, function ( gltf ) {
 
@@ -23,12 +23,11 @@ loader.load( modelUrl, function ( gltf ) {
     gltf.scene.rotation.z = 0
     
     const mat = new THREE.MeshBasicMaterial({ color: "white" });
+  const geo = new THREE.BoxGeometry();
 
-    const geo = new THREE.BoxGeometry();
+  const mesh = new THREE.Mesh(geo, mat);
 
-    const mesh = new THREE.Mesh(geo, mat);
-
-    app.scene.add( mesh );
+    app.scene.add( gltf.scene );
     console.log(app.camera)
     window.addEventListener('scroll', onScroll);
 
