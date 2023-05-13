@@ -4,6 +4,7 @@ import Threeasy from "threeasy";
 
 const app = new Threeasy(THREE, {alpha: true });
 
+
 var loader = new GLTFLoader();
 
 /* You must download your own .gltf model and reference it below.
