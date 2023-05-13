@@ -9,9 +9,8 @@ var loader = new GLTFLoader();
 /* You must download your own .gltf model and reference it below.
    If you do not see it, the model may be too small, try to adjust
    the scale values below. */
-let modelUrl = 'MobilePhone_01.glb'
 
-loader.load( modelUrl, function ( gltf ) {
+loader.load( 'out.glb', function ( gltf ) {
 
     console.log(gltf.scene);
     gltf.scene.scale.x = 5
